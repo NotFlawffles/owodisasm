@@ -10,12 +10,12 @@ std::vector<u16> loadFile(std::string fileName) {
     if (!file.is_open())
         std::exit(1);
 
-    u16 size;
+    size_t size;
     std::vector<u16> program;
-    file.read((char*) &size, sizeof(size));
+    file.read((char*) &size, sizeof(size_t));
     program.reserve(size);
     program.resize(size);
-    file.seekg(sizeof(u16));
+    file.seekg(sizeof(size_t));
     file.read((char*) &program[0], size * sizeof(u16));
     file.close();
     

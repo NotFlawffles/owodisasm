@@ -1,9 +1,9 @@
 #pragma once
 
 #include "opcodes.h"
-#include <map>
+#include <unordered_map>
 
-static std::map<u16, std::string> instructions = {
+static std::unordered_map<u16, std::string> instructions = {
     {Swp, "swp"},         {Swpz, "swpz"},         {Swpc, "swpc"},         {Swpv, "swpv"},
     {Add, "add"},         {Addz, "addz"},         {Addc, "addc"},         {Addv, "addv"},
     {Sub, "sub"},         {Subz, "subz"},         {Subc, "subc"},         {Subv, "subv"},
