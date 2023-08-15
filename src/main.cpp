@@ -4,19 +4,19 @@
 #include <vector>
 
 
-std::vector<i16> loadFile(std::string fileName) {
+std::vector<u16> loadFile(std::string fileName) {
     std::ifstream file(fileName, std::ios::in | std::ios::binary);
 
     if (!file.is_open())
         std::exit(1);
 
     size_t size;
-    std::vector<i16> program;
+    std::vector<u16> program;
     file.read((char*) &size, sizeof(size));
     program.reserve(size);
     program.resize(size);
     file.seekg(sizeof(size_t));
-    file.read((char*) &program[0], size * sizeof(i16));
+    file.read((char*) &program[0], size * sizeof(u16));
     file.close();
     
     return program;
@@ -28,11 +28,10 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    std::vector<i16> program = loadFile(argv[1]);
+    std::vector<u16> program = loadFile(argv[1]);
     std::ofstream file("disassembly.owo", std::ios::out);
 
-    for (i16 operand: program) {
-        std::cout << operand << std::endl;
+    for (u16 operand: program) {
         if (operand & 0x4000)
             file << instructions[operand] << std::endl;
 
