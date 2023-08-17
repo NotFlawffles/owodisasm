@@ -22,5 +22,6 @@ static std::unordered_map<u16, std::string> instructions = {
     {Syscall, "syscall"}, {Syscallz, "syscallz"}, {Syscallc, "syscallc"}, {Syscallv, "syscallv"},
     {Alloc, "alloc"},     {Allocz, "allocz"},     {Allocc, "allocc"},     {Allocv, "allocv"},
     {Str, "str"},         {Strz, "strz"},         {Strc, "strc"},         {Strv, "strv"},
-    {Ld, "ld"},           {Ldz, "ldz"},           {Ldc, "ldc"},           {Ldv, "ldv"}
+    {Ld, "ld"},           {Ldz, "ldz"},           {Ldc, "ldc"},           {Ldv, "ldv"},
+    {Rev, "rev"},           {Revz, "revz"},           {Revc, "revc"},           {Revv, "revv"}
 };
