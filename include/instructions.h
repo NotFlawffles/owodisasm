@@ -23,9 +23,10 @@ static std::unordered_map<u16, std::string> instructions = {
     {Alloc, "alloc"},     {Allocz, "allocz"},     {Allocc, "allocc"},     {Allocv, "allocv"},
     {Str, "str"},         {Strz, "strz"},         {Strc, "strc"},         {Strv, "strv"},
     {Ld, "ld"},           {Ldz, "ldz"},           {Ldc, "ldc"},           {Ldv, "ldv"},
-    {Rev, "rev"},         {Revz, "revz"},         {Revc, "revc"},         {Revv, "revv"},
     {Dbg, "dbg"},
     {Ret, "ret"},         {Retz, "retz"},         {Retc, "retc"},         {Retv, "retv"},
     {Dup, "dup"},         {Dupz, "dupz"},         {Dupc, "dupc"},         {Dupv, "dupv"},
-    {B, "b"},             {Bz, "bz"},             {Bc, "bc"},             {Bv, "bv"}
+    {B, "b"},             {Bz, "bz"},             {Bc, "bc"},             {Bv, "bv"},
+    {Set, "set"},         {Setz, "setz"},         {Setc, "setc"},         {Setv, "setv"},
+    {Get, "get"},         {Getz, "getz"},         {Getc, "getc"},         {Getv, "getv"}
 };
